@@ -2,9 +2,11 @@
 $task_uid = '17644980468b06b8708ea32002405643';
 $group_id = '21435359168d0655a3b1ee9098721494';
 $process_id = @@PROCESS;
+//$parent_case_id = @@APPLICATION;
 $translators = executeQuery("SELECT USR_UID FROM GROUP_USER WHERE GRP_UID = '$group_id'");
 $vars = array(
     'txt_order' => @@txt_order,
+    //'parent_case_id' => $parent_case_id,
 );
 foreach ($translators as $user) {
     $translator_id = $user['USR_UID'];
